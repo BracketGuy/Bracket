@@ -5,5 +5,5 @@ This is the main file for the project.
 
 int main (int argc, char *argv[])
 {
-    printf("filename: %s %d", argv[1], argc);
+    printf("filename: %s %d\n", argv[1], argc);
 }
