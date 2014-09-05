@@ -3,7 +3,7 @@ This file is for file I/O operations.
 */
 #include <stdio.h>
 
-int main ( int argc, char *argv[] )
+int open_file (int argc, char *argv[])
 {
     if ( argc != 2 ) /* argc should be 2 for correct execution */
     {
