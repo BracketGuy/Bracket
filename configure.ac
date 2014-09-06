@@ -1,0 +1,9 @@
+AC_INIT(src/main.c)
+
+PACKAGE=bracket
+VERSION=0.1.0
+
+AM_INIT_AUTOMAKE($PACKAGE, $VERSION)
+
+AC_PROG_CC
+AC_OUTPUT(Makefile src/Makefile)
