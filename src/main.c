@@ -1,9 +1,10 @@
 /*
 This is the main file for the project.
 */
+#include "io.h"
 #include <stdio.h>
 
 int main (int argc, char *argv[])
 {
-    printf("filename: %s %d\n", argv[1], argc);
+    handle_command_args(argc,argv); 
 }
