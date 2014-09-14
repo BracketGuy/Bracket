@@ -1,5 +1,5 @@
 #include <stdio.h>
-void handle_command_args(int argc, char **argv)
+const char *  handle_command_args(int argc, char **argv)
 {
     if(argc != 2)
     {
@@ -7,6 +7,6 @@ void handle_command_args(int argc, char **argv)
     }
     else
     {
-        printf("I am going to process file \"%s\"...\n", argv[1]);
+        return argv[1];
     }
 }
