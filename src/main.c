@@ -1,13 +1,16 @@
 /*
 This is the main file for the project.
 */
-#include "io.h"
 #include <stdio.h>
+#include "io.h"
 
-char filename[255]; /* name of file to be parsed  */
+const char *filename = { 0 };
 
 int main (int argc, char *argv[])
 {
-    const char *filename = handle_command_args(argc,argv);
-    printf("Processing file %s\n", filename);
+    filename = handle_command_args(argc,argv);
+    if(filename != NULL)
+    {
+        printf("Processing file %s\n", filename);
+    }
 }
