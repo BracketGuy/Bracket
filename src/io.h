@@ -8,3 +8,12 @@
  *  it returns NULL.  
  */
 const char * handle_command_args(int argc, char **argv);
+
+/*! \fn int * read_in_file(char *filename)
+ *     \brief Breaks input file into an array of lines.
+ *         \param filename The filename to be processed.
+ *          
+ *  Takes a file name returns an array populated with lines of code.
+ *  Or, if the file is empty, returns NULL.
+ */
+int * read_in_file(char *filename);
