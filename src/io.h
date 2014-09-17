@@ -1,3 +1,15 @@
+/*! \file io.h
+ *
+ *  Contains declarations for functions and variables involved in
+ *  I/O operations performed by Bracket. 
+ */
+
+/*! \var const char *filename
+ *
+ *  The name of the file that Bracket will be processing.
+ */
+const char *filename = { 0 };
+
 /*! \fn const char * handle_command_args(int argc,char **argv)
  *     \brief Handles command-line arguments.
  *         \param argc The number of command-line arguments.
