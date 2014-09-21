@@ -22,6 +22,19 @@ int * read_in_file(const char *filename)
     }
     else 
     {
-        printf("Processing source file %s\n", filename);
+        FILE *source_file = fopen( filename, "r" );
+        if(source_file == 0)
+        {
+            fprintf(stderr, "Could not open file. Make sure the file exists.\n");    
+        }
+        else
+        {
+            int x;
+            while((x = fgetc(source_file)) != EOF)
+            {
+                printf("%c", x);
+            }
+            fclose(source_file);
+        }        	
     }
 }
