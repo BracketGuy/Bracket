@@ -25,14 +25,14 @@ int * read_in_file(const char *filename)
         FILE *source_file = fopen( filename, "r" );
         if(source_file == 0)
         {
-            fprintf(stderr, "Could not open file. Make sure the file exists.\n");    
+            fprintf(stderr, "Could not open file \"%s\". Make sure the file exists.\n", filename);    
         }
         else
         {
-            int x;
-            while((x = fgetc(source_file)) != EOF)
+            int current_char;
+            while((current_char = fgetc(source_file)) != EOF)
             {
-                printf("%c", x);
+                printf("%c", current_char);
             }
             fclose(source_file);
         }        	
