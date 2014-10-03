@@ -14,6 +14,21 @@ const char *  handle_command_args(int argc, char **argv)
     }
 }
 
+int count_lines_in_file(FILE *file)
+{
+    int count = 0;
+    while(!feof(file))
+    {
+        int ch = fgetc(file);
+        if(ch == '\n')
+        {
+            count++;
+        }
+    }
+    rewind(file);
+    return count;
+}
+
 int * read_in_file(const char *filename)
 {
     if(filename == NULL)
@@ -29,11 +44,13 @@ int * read_in_file(const char *filename)
         }
         else
         {
-            int current_char;
+            int count = count_lines_in_file(source_file);
+	    int current_char;
             while((current_char = fgetc(source_file)) != EOF)
             {
                 printf("%c", current_char);
             }
+	    printf("Processed %i lines.\n", count);
             fclose(source_file);
         }        	
     }

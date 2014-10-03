@@ -17,9 +17,18 @@ const char *filename = { 0 };
  *          
  *  Takes the command-line arguments passed to main and returns the
  *  filename that we are going to process. Or, if no filename was found,
- *  it returns NULL.  
+ *  it returns NULL.
  */
 const char * handle_command_args(int argc, char **argv);
+
+/*! \fn int count_lines_in_file(FILE *file)
+ *     \brief Counts lines in source file.
+ *         \param file A pointer to the source file.
+ *          
+ *  Takes a pointer to a source file and returns a
+ *  count of how many lines are in the file.
+ */
+int count_lines_in_file(FILE *file);
 
 /*! \fn int * read_in_file(const char *filename)
  *     \brief Breaks input file into an array of lines.
