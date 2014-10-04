@@ -19,8 +19,8 @@ int count_lines_in_file(FILE *file)
     int count = 0;
     while(!feof(file))
     {
-        int ch = fgetc(file);
-        if(ch == '\n')
+        int current_char = fgetc(file);
+        if(current_char == '\n')
         {
             count++;
         }
