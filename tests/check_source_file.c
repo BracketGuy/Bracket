@@ -4,7 +4,7 @@
 
 START_TEST(test_create_source_file)
 {
-    /*int size = create_source_file(1);*/
+    create_source_file(1);
     ck_assert_int_eq(1,1);
 }
 END_TEST
