@@ -37,21 +37,21 @@ int * read_in_file(const char *filename)
     }
     else 
     {
-        FILE *source_file = fopen( filename, "r" );
-        if(source_file == 0)
+        FILE *file = fopen( filename, "r" );
+        if(file == 0)
         {
             fprintf(stderr, "Could not open file \"%s\". Make sure the file exists.\n", filename);    
         }
         else
         {
-            int count = count_lines_in_file(source_file);
+            int count = count_lines_in_file(file);
 	    int current_char;
-            while((current_char = fgetc(source_file)) != EOF)
+            while((current_char = fgetc(file)) != EOF)
             {
                 printf("%c", current_char);
             }
 	    printf("Processed %i lines.\n", count);
-            fclose(source_file);
+            fclose(file);
         }        	
     }
 }
