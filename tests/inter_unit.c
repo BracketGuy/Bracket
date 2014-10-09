@@ -19,11 +19,3 @@ int inter_unit_ck_str_eq(char *first_test_string, char *second_test_string)
     }
     return truth;
 }
-
-int main(void)
-{
-    printf("The truth is...%i\n",inter_unit_ck_str_eq("foo","foo"));
-    printf("The truth is...%i\n",inter_unit_ck_str_eq("foo","bar"));
-    printf("The truth is...%i\n",inter_unit_ck_int_eq(5,0));
-    return 0;
-}

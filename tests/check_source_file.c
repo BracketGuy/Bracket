@@ -1,8 +1,14 @@
 #include <stdlib.h>
-#include <check.h>
+/*#include <check.h>*/
+#include "inter_unit.h"
 #include "../src/source_file.h"
 
-START_TEST(test_create_source_file)
+int test_create_source_file(void)
+{
+    return 0;
+}
+
+/*START_TEST(test_create_source_file)
 {
     create_source_file(1);
     ck_assert_int_eq(1,1);
@@ -20,11 +26,11 @@ Suite * bracket_suite(void)
     tcase_add_test(tc_core, test_create_source_file);
     suite_add_tcase(s, tc_core);
     return s;
-}
+}*/
 
 int main(void)
 {
-    int number_failed;
+    /*int number_failed;
     Suite *s;
     SRunner *sr;
     
@@ -33,6 +39,7 @@ int main(void)
 
     srunner_run_all(sr, CK_NORMAL);
     number_failed = srunner_ntests_failed(sr);
-    srunner_free(sr);
+    srunner_free(sr);*/
+    int number_failed = test_create_source_file();
     return (number_failed == 0) ? EXIT_SUCCESS : EXIT_FAILURE;
 }
