@@ -1,7 +1,9 @@
 #include <stdlib.h>
 #include "source_file.h"
 
-int create_source_file(int lines)
+SourceFile *create_source_file(int lines)
 {
-    return 0;
+    SourceFile *source_file = (SourceFile *) malloc(sizeof(SourceFile));
+    source_file->lines = lines;
+    return source_file;
 }
