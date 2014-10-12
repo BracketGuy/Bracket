@@ -6,6 +6,6 @@ typedef struct SourceFile
     int lines;	
 } SourceFile;
 
-SourceFile *create_source_file(int lines);
+SourceFile *source_file_create(int lines);
 
 #endif /* SOURCE_FILE_H */
