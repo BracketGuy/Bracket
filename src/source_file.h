@@ -3,9 +3,9 @@
 
 typedef struct SourceFile
 {
-    int lines;	
+    int total_lines;
 } SourceFile;
 
-SourceFile *source_file_create(int lines);
+SourceFile *source_file_create(int total_lines);
 
 #endif /* SOURCE_FILE_H */

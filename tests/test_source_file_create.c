@@ -7,6 +7,6 @@ int main(void)
 {
     int success = EXIT_FAILURE;
     SourceFile *test_source_file = source_file_create(1);
-    success = inter_unit_ck_int_eq(test_source_file->lines,1);
+    success = inter_unit_ck_int_eq(test_source_file->total_lines,1);
     return success;
 }
